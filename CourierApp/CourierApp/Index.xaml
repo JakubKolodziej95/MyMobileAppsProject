@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CourierApp.Index">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="tempObject" Text="Object" Clicked="tempObject_Clicked"/>
+            <Button x:Name="btnNewParcel" Text="New Parcel" Clicked="btnNewParcel_Clicked"/>
+            <Button x:Name="btnHistory" Text="History" Clicked="btnHistory_Clicked"/>
+            <Button x:Name="btnCalendar" Text="Calendar" Clicked="btnCalendar_Clicked"/>
+            <Button x:Name="btnProfile" Text="Profile" Clicked="btnProfile_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

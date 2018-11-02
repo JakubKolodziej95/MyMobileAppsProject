@@ -13,5 +13,28 @@ namespace CourierApp
         {
             InitializeComponent();
         }
+
+        // LOG IN BUTTON
+        private void logInButton_Clicked(object sender, EventArgs e)
+        {
+            bool isUserEmpty, isPassEmpty;
+            isUserEmpty = String.IsNullOrEmpty(logInUser.Text);
+            isPassEmpty = String.IsNullOrEmpty(logInPass.Text);
+
+            if(isUserEmpty || isPassEmpty)
+            {
+                DisplayAlert("Error", "Username or Password are incorrect", "OK");
+            }
+            else
+            {
+                Navigation.PushAsync(new Index());
+            }
+        }
+
+        // REGISTRATION BUTTON
+        private void registerButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Register());
+        }
     }
 }

@@ -5,10 +5,13 @@
              x:Class="CourierApp.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Label Text="Username"/>
+        <Entry x:Name="logInUser" Placeholder="Username"/>
+        <Label Text="Password"/>
+        <Entry x:Name="logInPass" Placeholder="Password" IsPassword="True"/>
+        <Button x:Name="logInButton" Text="Log In" Clicked="logInButton_Clicked"/>
+        <Label Text="Don't have an account yet?"/>
+        <Button x:Name="registerButton" Text="Register" Clicked="registerButton_Clicked"/>
     </StackLayout>
 
 </ContentPage>

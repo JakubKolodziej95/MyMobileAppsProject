@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CourierApp.OrderDetails">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Collection details"
+                   HorizontalOptions="Center"
+                   FontSize="Medium"
+                   FontAttributes="Bold"/>
+            <Label Text="Client name" Style="{StaticResource FormLabel}"/>
+            <Label x:Name="clientName"/>
+            <Label Text="Address 1" Style="{StaticResource FormLabel}"/>
+            <Label x:Name="clientAddress1"/>
+            <Label Text="Address 2" Style="{StaticResource FormLabel}"/>
+            <Label x:Name="clientAddress2"/>
+            <Label Text="Town/City" Style="{StaticResource FormLabel}"/>
+            <Label x:Name="clientTown"/>
+            <Label Text="County" Style="{StaticResource FormLabel}"/>
+            <Label x:Name="clientCounty"/>
+            <Label Text="Email" Style="{StaticResource FormLabel}"/>
+            <Label x:Name="clientEmail"/>
+
+
+            <Label Text="Delivery details"
+                   HorizontalOptions="Center"
+                   FontSize="Medium"
+                   FontAttributes="Bold"/>
+            <Label Text="Recipient name" Style="{StaticResource FormLabel}"/>
+            <Label x:Name="recipientName"/>
+            <Label Text="Address 1" Style="{StaticResource FormLabel}"/>
+            <Label x:Name="recipientAddress1"/>
+            <Label Text="Address 2" Style="{StaticResource FormLabel}"/>
+            <Label x:Name="recipientAddress2"/>
+            <Label Text="Town/City" Style="{StaticResource FormLabel}"/>
+            <Label x:Name="recipientTown"/>
+            <Label Text="County" Style="{StaticResource FormLabel}"/>
+            <Label x:Name="recipientCounty"/>
+            <Label Text="Phone number" Style="{StaticResource FormLabel}"/>
+            <Label x:Name="recipientPhone"/>
+
+            <Button x:Name="btnCalcCost" Text="Calculate Cost" Clicked="btnCalcCost_Clicked"/>
+            <Button x:Name="btnInvoice" Text="Send Invoice" Clicked="btnInvoice_Clicked"/>
+            <Button x:Name="btnRouteMap" Text="Route" Clicked="btnRouteMap_Clicked"/>
+            <Button x:Name="btnDelivered" Text="Delivered" Clicked="btnDelivered_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
