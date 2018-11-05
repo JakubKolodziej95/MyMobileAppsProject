@@ -21,5 +21,16 @@ namespace CourierApp.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
+
+        //disabling back button
+        public override void OnBackPressed()
+        {
+            if("lblAnswer" == null) //replace lblAnswer with eSignature box
+            {
+                //return;
+            }
+
+            base.OnBackPressed();
+        }
     }
 }

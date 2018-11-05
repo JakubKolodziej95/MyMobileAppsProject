@@ -9,7 +9,7 @@ namespace CourierApp
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        string[] parcelSize = new string[3] { "Small", "Medium", "Large" };
+        //string[] sizeClass = new string[3] { "Small", "Medium", "Large" };
         private double weight, height, width, length, cost;
 
         public double Height
@@ -32,7 +32,7 @@ namespace CourierApp
             }
             set
             {
-                height = value;
+                width = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("width"));
             }
         }
@@ -44,13 +44,25 @@ namespace CourierApp
             }
             set
             {
-                height = value;
+                length = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("length"));
             }
         }
         public double Cost
         {
-            get { return height * width * length; }
+            get
+            {
+                cost = Height * Width * Length;
+                if(cost > 0)
+                {
+                    return cost;
+                }
+                else
+                {
+                    cost = 0;
+                    return cost;
+                }
+            }
         }
     }
 }

@@ -20,15 +20,15 @@ namespace CourierApp
         // CHANGE PASSWORD BUTTON
         private void btnChangePass_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushModalAsync(new ModalChangePass());
         }
 
         // LOG OUT BUTTON
         private void btnLogOut_Clicked(object sender, EventArgs e)
         {
-            // log out should bring user back to log-in page and clear stack,
-            // not push a new instance of main page on top of the stack.
-            Navigation.PushAsync(new MainPage());
+            //restores log-in/main page as root page then pops to it
+            Application.Current.MainPage = new NavigationPage(new MainPage());
+            Navigation.PopToRootAsync();
         }
     }
 }

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CourierApp.ModalChangePass">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Current password: " Style="{StaticResource FormLabel}"/>
+            <Entry x:Name="changePassCurrent"
+                   Style="{StaticResource NewOrderEntry}"
+                   IsPassword="True"/>
+
+            <Label Text="New password: " Style="{StaticResource FormLabel}"/>
+            <Entry x:Name="changePassNew"
+                   Style="{StaticResource NewOrderEntry}"
+                   IsPassword="True"/>
+
+            <Label Text="Repeat password: " Style="{StaticResource FormLabel}"/>
+            <Entry x:Name="changePassNewAgain"
+                   Style="{StaticResource NewOrderEntry}"
+                   IsPassword="True"/>
+
+            <Button x:Name="btnChangePassConfirm" Text="Change" Clicked="btnChangePassConfirm_Clicked"/>
+            <Button x:Name="btnChangePassCancel" Text="Cancel" Clicked="btnChangePassCancel_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

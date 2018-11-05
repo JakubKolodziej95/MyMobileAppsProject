@@ -20,7 +20,8 @@ namespace CourierApp
         // CALCULATE COST OF PARCEL BUTTON
         private void btnCalcCost_Clicked(object sender, EventArgs e)
         {
-            
+            CalcCost answerCost = new CalcCost();
+            Navigation.PushModalAsync(new ModalCost());
         }
 
         // SEND INVOICE BUTTON

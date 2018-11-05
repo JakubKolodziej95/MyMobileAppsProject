@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CourierApp.ModalCost">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Parcel classification: " Style="{StaticResource FormLabel}"/>
+            <Label x:Name="lblSize"/>
+            
+            <Label Text="Cost: " Style="{StaticResource FormLabel}"/>
+            <Label x:Name="lblAnswer"/>
+            <!-- Text="{Binding Path=Cost}" -->
+            
+            <Label Text="Please sign here: " Style="{StaticResource FormLabel}"/>
+            <Label Text="Placeholder"/>
+
+            <Button x:Name="btnConfirmSign" Text="Confirm" Clicked="btnConfirmSign_Clicked"/>
+            <Button x:Name="btnCancelSign" Text="Cancel" Clicked="btnCancelSign_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
