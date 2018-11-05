@@ -9,9 +9,18 @@
             <Setter Property="FontAttributes" Value="Bold"/>
         </Style>
 
+        
         <Style x:Key="NewOrderEntry" TargetType="Entry">
             <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
             <Setter Property="FontSize" Value="Small"/>
+        </Style>
+
+        
+        <Style x:Key="OrderHeading" TargetType="Label">
+            <Setter Property="HorizontalOptions" Value="Start"/>
+            <Setter Property="FontSize" Value="Medium"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="TextColor" Value="DarkGoldenrod"/>
         </Style>
     </Application.Resources>
 </Application>

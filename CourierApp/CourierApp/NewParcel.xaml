@@ -3,69 +3,101 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CourierApp.NewParcel">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Collection details"
-                   HorizontalOptions="Center"
-                   FontSize="Medium"
-                   FontAttributes="Bold"/>
-            <Label Text="Client name" Style="{StaticResource FormLabel}"/>
-            <Entry x:Name="newClientName"
-                   Placeholder="Johnny Depp"
-                   Style="{StaticResource NewOrderEntry}"/>
-            <Label Text="Address 1" Style="{StaticResource FormLabel}"/>
-            <Entry x:Name="newClientAddress1"
-                   Placeholder="1 Main Street"
-                   Style="{StaticResource NewOrderEntry}"/>
-            <Label Text="Address 2" Style="{StaticResource FormLabel}"/>
-            <Entry x:Name="newClientAddress2"
-                   Placeholder="Oranmore"
-                   Style="{StaticResource NewOrderEntry}"/>
-            <Label Text="Town/City" Style="{StaticResource FormLabel}"/>
-            <Entry x:Name="newClientTown"
-                   Placeholder="Galway"
-                   Style="{StaticResource NewOrderEntry}"/>
-            <Label Text="County" Style="{StaticResource FormLabel}"/>
-            <Entry x:Name="newClientCounty"
-                   Placeholder="Galway"
-                   Style="{StaticResource NewOrderEntry}"/>
-            <Label Text="Email" Style="{StaticResource FormLabel}"/>
-            <Entry x:Name="newClientEmail"
-                   Placeholder="ahsurelookit@gmail.com"
-                   Style="{StaticResource NewOrderEntry}"/>
-            
-
-            <Label Text="Delivery details"
-                   HorizontalOptions="Center"
-                   FontSize="Medium"
-                   FontAttributes="Bold"/>
-            <Label Text="Recipient name" Style="{StaticResource FormLabel}"/>
-            <Entry x:Name="newRecipientName"
-                   Placeholder="Danny DeVito"
-                   Style="{StaticResource NewOrderEntry}"/>
-            <Label Text="Address 1" Style="{StaticResource FormLabel}"/>
-            <Entry x:Name="newRecipientAddress1"
-                   Placeholder="5 Scrooge Lane"
-                   Style="{StaticResource NewOrderEntry}"/>
-            <Label Text="Address 2" Style="{StaticResource FormLabel}"/>
-            <Entry x:Name="newRecipientAddress2"
-                   Placeholder="Barnacles"
-                   Style="{StaticResource NewOrderEntry}"/>
-            <Label Text="Town/City" Style="{StaticResource FormLabel}"/>
-            <Entry x:Name="newRecipientTown"
-                   Placeholder="Pidgeonville"
-                   Style="{StaticResource NewOrderEntry}"/>
-            <Label Text="County" Style="{StaticResource FormLabel}"/>
-            <Entry x:Name="newRecipientCounty"
-                   Placeholder="Kerry"
-                   Style="{StaticResource NewOrderEntry}"/>
-            <Label Text="Phone number" Style="{StaticResource FormLabel}"/>
-            <Entry x:Name="newRecipientPhone"
-                   Placeholder="(+353)87 123 4567"
-                   Style="{StaticResource NewOrderEntry}"/>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <Label Text="Collection details"
+                       Style="{StaticResource OrderHeading}"/>
+                <Label Text="Client name" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newClientName"
+                       Placeholder="Johnny Depp"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="Address 1" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newClientAddress1"
+                       Placeholder="1 Main Street"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="Address 2" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newClientAddress2"
+                       Placeholder="Oranmore"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="Town/City" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newClientTown"
+                       Placeholder="Galway"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="County" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newClientCounty"
+                       Placeholder="Galway"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="Email" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newClientEmail"
+                       Placeholder="ahsurelookit@gmail.com"
+                       Keyboard="Email"
+                       Style="{StaticResource NewOrderEntry}"/>
 
 
-            <Button x:Name="btnAddOrder" Text="Add" Clicked="btnAddOrder_Clicked"/>
-            <Button x:Name="btnCancelOrder" Text="Cancel" Clicked="btnCancelOrder_Clicked"/>
-        </StackLayout>
+                <Label Text="Parcel details"
+                       Style="{StaticResource OrderHeading}"/>
+                <Label Text="Weight(kg)" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newWeight"
+                       Text="{Binding Path=weight, Mode=OneTime}"
+                       Placeholder="12"
+                       Keyboard="Numeric"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="Height(cm)" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newHeight"
+                       Text="{Binding Path=height, Mode=OneTime}"
+                       Placeholder="20"
+                       Keyboard="Numeric"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="Width(cm)" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newWidth"
+                       Text="{Binding Path=width, Mode=OneTime}"
+                       Placeholder="15"
+                       Keyboard="Numeric"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="Length(cm)" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newLength"
+                       Text="{Binding Path=length, Mode=OneTime}"
+                       Placeholder="15"
+                       Keyboard="Numeric"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="Extra comments" Style="{StaticResource FormLabel}"/>
+                <Editor x:Name="newComments"
+                        MaxLength="100"
+                        FontSize="Small"/>
+
+
+                <Label Text="Delivery details"
+                       Style="{StaticResource OrderHeading}"/>
+                <Label Text="Recipient name" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newRecipientName"
+                       Placeholder="Danny DeVito"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="Address 1" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newRecipientAddress1"
+                       Placeholder="5 Scrooge Lane"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="Address 2" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newRecipientAddress2"
+                       Placeholder="Barnacles"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="Town/City" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newRecipientTown"
+                       Placeholder="Pidgeonville"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="County" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newRecipientCounty"
+                       Placeholder="Kerry"
+                       Style="{StaticResource NewOrderEntry}"/>
+                <Label Text="Phone number" Style="{StaticResource FormLabel}"/>
+                <Entry x:Name="newRecipientPhone"
+                       Placeholder="(+353)87 123 4567"
+                       Keyboard="Numeric"
+                       Style="{StaticResource NewOrderEntry}"/>
+
+
+                <Button x:Name="btnAddOrder" Text="Add" Clicked="btnAddOrder_Clicked"/>
+                <Button x:Name="btnCancelOrder" Text="Cancel" Clicked="btnCancelOrder_Clicked"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

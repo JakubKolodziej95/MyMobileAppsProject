@@ -20,13 +20,13 @@ namespace CourierApp
         // CALCULATE COST OF PARCEL BUTTON
         private void btnCalcCost_Clicked(object sender, EventArgs e)
         {
-
+            
         }
 
         // SEND INVOICE BUTTON
         private void btnInvoice_Clicked(object sender, EventArgs e)
         {
-            String s = "Invoice successfully sent to <bound client email>";
+            string s = "Invoice successfully sent to <bound client email>.";
             DisplayAlert("Invoice Sent", s, "OK");
         }
 
@@ -40,6 +40,8 @@ namespace CourierApp
         private void btnDelivered_Clicked(object sender, EventArgs e)
         {
             // move this object from list in index to list in history
+            string s = "Order completed. Order has been moved to 'History'.";
+            DisplayAlert("Delivered", s, "OK");
             Navigation.PopAsync();
         }
     }

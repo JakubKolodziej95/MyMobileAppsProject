@@ -21,14 +21,14 @@ namespace CourierApp
             isUserEmpty = String.IsNullOrEmpty(logInUser.Text);
             isPassEmpty = String.IsNullOrEmpty(logInPass.Text);
 
-            if(isUserEmpty || isPassEmpty)
-            {
-                DisplayAlert("Error", "Username or Password are incorrect", "OK");
-            }
-            else
-            {
+           // if(isUserEmpty || isPassEmpty)
+            //{
+           //     DisplayAlert("Error", "Username or Password are incorrect", "OK");
+           // }
+           // else
+           // {
                 Navigation.PushAsync(new Index());
-            }
+           // }
         }
 
         // REGISTRATION BUTTON
