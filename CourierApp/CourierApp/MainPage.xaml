@@ -5,8 +5,8 @@
              x:Class="CourierApp.MainPage">
 
     <StackLayout>
-        <Label Text="Username"/>
-        <Entry x:Name="logInUser" Placeholder="Username"/>
+        <Label Text="User ID"/>
+        <Entry x:Name="logInUser" Placeholder="Id"/>
         <Label Text="Password"/>
         <Entry x:Name="logInPass" Placeholder="Password" IsPassword="True"/>
         <Button x:Name="logInButton" Text="Log In" Clicked="logInButton_Clicked"/>

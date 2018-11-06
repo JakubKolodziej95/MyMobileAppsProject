@@ -20,6 +20,12 @@ namespace CourierApp
         // COMPLETE REGISTRATION BUTTON
         private void registerDone_Clicked(object sender, EventArgs e)
         {
+            string id;
+            RandomID rndId = new RandomID();
+
+            id = rndId.GenerateId();
+            DisplayAlert("Welcome", "Your user ID is:\n\n" + id + "\n\nPlease remember it, you will require it to log in.", "Ok");
+
             Navigation.PopAsync();
         }
     }
