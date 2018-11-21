@@ -10,14 +10,16 @@
                    FontAttributes="Bold"/>
             <Label x:Name="lblNameProfile"
                    HorizontalOptions="Start"
-                   FontSize="Small"/>
+                   FontSize="Small"
+                   Text="{Binding , Mode=OneWay}"/>
             <Label Text="Courier ID: "
                    HorizontalOptions="Start"
                    FontSize="Small"
                    FontAttributes="Bold"/>
             <Label x:Name="lblIDProfile"
                    HorizontalOptions="Start"
-                   FontSize="Small"/>
+                   FontSize="Small"
+                   Text="{Binding userId, Mode=OneWay}"/>
 
             <Button x:Name="btnChangePass" Text="Change Password" Clicked="btnChangePass_Clicked"/>
             <Button x:Name="btnLogOut" Text="Log Out" Clicked="btnLogOut_Clicked"/>

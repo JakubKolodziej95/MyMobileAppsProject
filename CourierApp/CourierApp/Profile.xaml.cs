@@ -15,6 +15,8 @@ namespace CourierApp
 		public Profile ()
 		{
 			InitializeComponent ();
+            BindingContext = new ProfileInfo();
+            
 		}
 
         // CHANGE PASSWORD BUTTON

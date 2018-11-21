@@ -21,10 +21,12 @@ namespace CourierApp
         private void registerDone_Clicked(object sender, EventArgs e)
         {
             string id;
-            RandomID rndId = new RandomID();
 
+            RandomID rndId = new RandomID();
             id = rndId.GenerateId();
             DisplayAlert("Welcome", "Your user ID is:\n\n" + id + "\n\nPlease remember it, you will require it to log in.", "Ok");
+
+            ProfileInfo proInf = new ProfileInfo();
 
             Navigation.PopAsync();
         }
